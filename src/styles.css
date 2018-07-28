@@ -58,5 +58,7 @@
 
 .messageOverlay {
   animation-name: explodeMessage;
-  animation-duration: 1.5s;
+  animation-duration: 1s;
+  width: 100%;
+  text-align: center;
 }
