@@ -1,0 +1,46 @@
+.App {
+  font-family: sans-serif;
+  text-align: center;
+}
+
+.gameArea {
+  border: 2px solid black;
+  min-height: 50px;
+}
+
+.shell {
+  box-shadow: 0px 0px 10px 1px black;
+  border-radius: 200px;
+  height: 200px;
+  width: 200px;
+  margin: 10px;
+  transition: box-shadow 0.5s;
+}
+
+.shell:hover {
+  box-shadow: 0px 0px 10px 1px gray;
+  cursor: pointer;
+}
+
+.shell:active {
+  box-shadow: 0px 0px 10px 1px red;
+  transition: box-shadow 0s;
+}
+
+.shell.shellDown {
+  background: radial-gradient(ellipse at center, sienna, orangered 0%, sienna);
+}
+
+.shell.shellUp {
+  background: radial-gradient(ellipse at center, gray, black 0%, gray);
+}
+
+.shell.shellWin {
+  background: radial-gradient(
+    ellipse at center,
+    green 0%,
+    whitesmoke 10%,
+    yellow 50%,
+    orange 100%
+  );
+}
