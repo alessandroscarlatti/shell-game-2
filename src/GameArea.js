@@ -190,6 +190,17 @@ export function setWinningShell(dispatch) {
 
 // display
 
+const st = {
+  anchor: {
+    position: "relative"
+  },
+
+  messageOverlay: {
+    position: "absolute",
+    color: "rgba(34, 34, 34, 0%)"
+  }
+};
+
 class GameArea extends React.Component {
   constructor(props) {
     super(props);
@@ -221,13 +232,19 @@ class GameArea extends React.Component {
 
     return (
       <div className="gameArea">
+        <div style={st.anchor}>
+          {this.props.message ? (
+            <h1 style={st.messageOverlay} className="messageOverlay">
+              {this.props.message.text}
+            </h1>
+          ) : null}
+        </div>
         <table>
           <tbody>
             <tr>{columns}</tr>
           </tbody>
         </table>
-        <div />
-        <p>{this.props.message ? this.props.message.text : null}</p>
+
         <h2>Games</h2>
         <p>{this.props.stats.gamesCount}</p>
         <h2>Wins</h2>

@@ -44,3 +44,19 @@
     orange 100%
   );
 }
+
+@keyframes explodeMessage {
+  from {
+    font-size: 100px;
+    color: black;
+  }
+  to {
+    font-size: 250px;
+    color: rgba(34, 34, 34, 0%);
+  }
+}
+
+.messageOverlay {
+  animation-name: explodeMessage;
+  animation-duration: 1.5s;
+}
